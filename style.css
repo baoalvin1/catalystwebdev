@@ -1,52 +1,81 @@
-body{
+:root {
+  --background-color: rgba(255, 255, 255, 0.5);
+  --text-color: #000;
+  --hover-color: #b9b9b9;
+}
+[data-theme="dark"] {
+  --background-color: rgba(87, 89, 88, 0.4);
+  --text-color: #fff;
+  --hover-color: #000;
+}
+body {
   margin: 0;
   padding: 0;
   background: black;
   background-size: cover;
 }
-.box{
+.box {
   width: 450px;
-  background: rgba(87, 89, 88, 0.4);
+  background: var(--background-color);
   padding: 40px;
   text-align: center;
   margin: auto;
   margin-top: 5%;
-  color: white;
-  font-family: 'Century Gothic', sans-serif;
+  color: var(--text-color);
+  font-family: "Century Gothic", sans-serif;
 }
-.box-img{
+.box-img {
   border-radius: 50%;
   width: 200px;
   height: 200px;
 }
-.box h1{
+.box h1 {
   font-size: 40px;
   letter-spacing: normal;
   font-weight: 100;
 }
-.box h2{
+.box h2 {
   font-size: 25px;
   letter-spacing: 3px;
   font-weight: 100;
 }
-.box p{
+.box p {
   text-align: center;
 }
-ul{
+ul {
   margin: 0;
   padding: 0;
 }
-.box li{
+.box li {
   display: inline-block;
   margin: 6px;
   list-style: none;
 }
-.box li a{
-  color: white;
+.box li a {
+  color: var(--text-color);
   text-decoration: none;
   font-size: 60px;
   transition: all ease-in-out 250ms;
 }
-.box li a:hover{
-  color: #b9b9b9;
+.box li a:hover {
+  color: var(--hover-color);
+}
+.box button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid var(--text-color);
+  margin: 0 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: 300;
+  color: var(--text-color);
+  background-color: Transparent;
+  text-align: center;
+  transition: all 0.2s;
+  outline:0;
+}
+.box button:hover {
+  color: var(--text-color);
+  background-color: var(--hover-color);
 }
